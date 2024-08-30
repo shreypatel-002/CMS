@@ -12,9 +12,14 @@ export default defineConfig({
         secure:false,
         changeOrigin: true,
       },
-
+      
     },
   },
-
+  
+  build: {
+    rollupOptions: {
+      external: ['mongoose'],
+    },
+  },
   plugins: [react()],
 });
